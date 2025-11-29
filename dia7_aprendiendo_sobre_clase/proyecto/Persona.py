@@ -21,10 +21,8 @@ class Cliente(Persona):
 
     # Metodos
     def __str__(self):    
-        # Metodo que muestra los datos del cliente    
-        print(f"Cliente: {self.nombre} {self.apellido}")
-        print(f"Cuenta: {self.numero_cuenta}")
-        print(f"Balance: {self.balance}")
+        # Metodo que muestra los datos del cliente
+        return f"Cliente: {self.nombre} {self.apellido}\nCuenta: {self.numero_cuenta}\nBalance: {self.balance}"    
     
     def depositar(self, cantidad):
         # Metodo que deposita dinero en la cuenta
@@ -82,7 +80,7 @@ def main():
                 # Mostrar cliente
                 system("clear")
                 anuncio("Mostrar cliente")
-                cliente.__str__()
+                print(cliente)
                 input("Presione una tecla para continuar...")
             case 3:
                 # Depositar dinero
