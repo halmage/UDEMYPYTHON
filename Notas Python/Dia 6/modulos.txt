@@ -1,0 +1,94 @@
+<-- metodos importantes para el manejo del sistema operativo -->
+[1] import os
+    -os.getcwd() -> obtiene el directorio de trabajo actual
+    -os.chdir("/home/halmagedecesilia/Documentos") -> cambiar de directorio
+    -os.makedirs("/home/halmagedecesilia/Documentos/ejemplo", exist_ok=True) -> crea una carpeta 
+    -os.remove("test.txt") -> elimina el archivo 
+    -os.removedirs("folder") -> elimina la carpeta
+    -os.path.basename(ruta) -> me da el nombre de base de la ruta especificada
+    -os.path.dirname(ruta) -> nombre de la carpeta que esta el archivo
+    -os.path.split(ruta) -> hace una tupla con el nombre de la carpeta y el archivo contenido
+    -os.rmdir("/home/halmagedecesilia/Vídeos/Problemas") -> elimina la carpera en la ruta ya senalada
+
+[2] from pathlib import Path
+    - carpeta = Path("/home/halmagedecesilia/Vídeos/testpython") -> envia al directorio sin importar que sistema operativo es
+      archivo = carpeta / "creep.txt"
+      # Verificar existencia
+        if archivo.exists():
+            print("El archivo existe")
+
+      # Verificar si es archivo o directorio
+        archivo.is_file()
+        archivo.is_dir()
+
+      # Obtener extensión
+        print(archivo.suffix) 
+
+      # Obtener nombre sin extensión
+        print(archivo.stem)
+
+      # Obtener nombre completo
+        archivo.name 
+
+      # Leer y escribir archivos
+        archivo.write_text('Hola mundo')  # Escribir
+        archivo.read_text()   # Leer
+
+      # Obtener nombre sin el enlace
+        archivo.stem 
+
+      # Crea un archivo si no existe por medio de la ruta
+        carpeta.touch()
+
+      # Crear un directorio
+      ruta = Path("mi_carpeta")
+      ruta.mkdir()  # Crea el directorio
+
+      # Crear directorios anidados
+      ruta = Path("carpeta1/carpeta2/carpeta3")
+      ruta.mkdir(parents=True, exist_ok=True)  # Crea todos los directorios necesarios
+
+      # "documentos" (directorio padre)
+      print(ruta.parent)         
+
+      # Ruta absoluta completa
+      print(folder.absolute())  
+
+      # Cambiar extensión
+      nueva_ruta = ruta.with_suffix('.json')
+
+      # Verificar si ya existe
+      if ruta.exists():
+        print(f"El archivo {nombre_archivo} ya existe")
+        return False
+
+      # from pathlib import PureWindowsPath
+      # transforma las rutas creadas a ruta de windows
+
+      ruta_windows = PureWindowsPath(folder)
+
+      # Indicar el principal directorio
+      base = Path.home()
+
+      # Copiar enlace 
+      guia = Path(base, "America", "Venezuela", Path("Sucre", "Cumana.txt"))
+      guia2 = guia.with_name("Santa_Fe.txt")
+
+      # Obtener todos los archivo de una carpeta
+      for txt in Path(guia).glob("*.txt"):
+          print(txt)
+
+      for txt in Path(guia).glob("**/*.txt"): # Obtener de todas la carpetas anteriores
+          print(txt)
+      
+      # buscar documentos en una ruta relativa
+      guia = Path("home", "halmagedecesilia", "Documentos", "lapiz", "mago.txt")
+      folder_documents = guia.relative_to(Path("home", "halmagedecesilia"))
+
+      # Iterar en las carpetas de una carpeta
+      - folder = Path(".")
+      - for elemento in folder.iterdir():
+         print(elemento)
+      
+      # Visualizar el tamano de un archivo
+        elemento.stat().st_size

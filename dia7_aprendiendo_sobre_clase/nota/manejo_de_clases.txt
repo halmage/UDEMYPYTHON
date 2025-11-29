@@ -1,0 +1,83 @@
+[1] herencia
+    [1.1] herencia simple
+    [1.2] herencia multiple
+    [1.3] herencia extendida
+    [1.4] herencia multiple extendida
+    [1.5] herencia multiple extendida con herencia simple
+[2] polimorfismo
+    [2.1] polimorfismo de sobreescritura
+    [2.2] polimorfismo de sobre carga
+    [2.3] polimorfismo de sobre carga con herencia
+    [2.4] polimorfismo de sobre carga con herencia multiple
+    [2.5] polimorfismo de sobre carga con herencia multiple extendida
+    [2.6] polimorfismo de sobre carga con herencia multiple extendida con herencia simple
+[3] cohesion
+    [3.1] cohesion de composicion
+    [3.2] cohesion de agregacion
+    [3.3] cohesion de herencia
+[4] abstracción
+    [4.1] abstracción de herencia
+    [4.2] abstracción de composicion
+    [4.3] abstracción de agregacion
+[5] acoplamiento
+    [5.1] acoplamiento de herencia
+    [5.2] acoplamiento de composicion
+    [5.3] acoplamiento de agregacion
+[6] encapsulamiento
+    [6.1] encapsulamiento de herencia
+    [6.2] encapsulamiento de composicion
+    [6.3] encapsulamiento de agregacion
+
+<- Como crear una clase ->
+class Persona:
+    pass
+persona = Persona()
+print(type(persona))
+
+<- Metodos de una clase ->
+
+* __init__ es un metodo especial que se ejecuta al crear un objeto
+* self es una referencia a la instancia de la clase
+* nombre y edad son atributos de la clase
+
+def __init__(self, nombre, edad):
+    self.nombre = nombre
+    self.edad = edad
+        
+<- Decoradores ->
+* metodo de instancia
+* metodo de clase @classmethod
+* metodo estatico @staticmethod
+
+# funciones mas utilizadas
+print(Padre.__mro__)
+
+# Ejemplo de cohesion fuerte
+
+    def suma(lista_numeros):
+        resultado = 0
+        for n in lista_numeros:
+            resultado += n
+        return resultado
+
+# ejemplo de cohesion debil
+
+    def suma():
+        num1 = float(input("Elige un número"))
+        num2 = float(input("Elige otro número"))
+        resultado = num1 + num2
+        return resultado
+
+# Metodos especiales
+# __init__ es el constructor
+def __init__(self, nombre, genero, canciones):
+
+#__str__ es el metodo que se ejecuta cuando se usa la funcion print
+def __str__(self):
+
+#__len__ es el metodo que se ejecuta cuando se usa la funcion len()
+def __len__(self):
+
+#__del__ es el metodo que se ejecuta cuando se usa la funcion del()
+def __del__(self):
+

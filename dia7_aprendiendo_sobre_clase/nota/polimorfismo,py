@@ -1,0 +1,39 @@
+# ejemplo de polimorfismo
+class Vaca:
+    def sonido(self):
+        return "muu"
+
+class Gato:
+    def sonido(self):
+        return "miau"
+
+class Perro:
+    def sonido(self):
+        return "guau"
+
+def hacerSonido(animal):
+    print(animal.sonido())
+
+vaca = Vaca()
+gato = Gato()
+perro = Perro()
+
+hacerSonido(vaca)
+hacerSonido(gato)
+hacerSonido(perro)
+
+
+# otro ejemplo de polimorfismo
+
+class Vaca:
+    def sonido(self):
+        return "muu"
+
+class Gato:
+    def sonido(self):
+        return "miau"
+        
+animales = [Vaca(), Gato()]
+
+for animal in animales:
+    print(animal.sonido())

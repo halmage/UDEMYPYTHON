@@ -1,0 +1,9 @@
+<----- Libreria os (manejo del sistema deste python) -->
+Para utilizar esta libreria primero tenemos que importarla
+unas de las utilidades se da a continuacion:
+
+# system
+from os import system
+
+# Borrar informacion en la pantalla
+system("clear")

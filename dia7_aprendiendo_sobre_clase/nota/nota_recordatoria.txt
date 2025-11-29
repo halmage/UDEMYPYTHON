@@ -1,0 +1,6 @@
+#################### Nota sobre herencia ####################
+
+las herencia multiples cuando se heredan dos o mas clases 
+hay que tener cuidado con el orden de las herencias
+cuando se heredan dos o mas clases se heredan los metodos de las clases
+y su orden es fundamental para su funcionamiento

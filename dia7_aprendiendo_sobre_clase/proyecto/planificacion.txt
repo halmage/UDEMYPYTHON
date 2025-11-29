@@ -1,0 +1,24 @@
+# Cuenta Bancaria
+
+#class Persona():
+"""
+    Atributos:
+        nombre
+        apellido
+"""
+
+#class Cliente(Persona):
+"""
+    Atributos:
+        numero_cuenta
+        balance
+    Metodos:
+        __str__() -> Imprime el nombre y apellido del cliente y el balance de su cuenta
+        depositar() -> Aumenta el balance de la cuenta
+        retirar() -> Disminuye el balance de la cuenta
+        mostrar_balance() -> Muestra el balance de la cuenta
+""" 
+
+# def crear_cliente():
+
+# def main():

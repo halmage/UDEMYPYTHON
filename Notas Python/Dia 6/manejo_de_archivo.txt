@@ -1,0 +1,22 @@
+
+                        **Notas**
+[1] Tengo que tomar en cuenta que la manipulacion de archivos
+    es una cadena de caracteres por lo tanto uno puede hacer
+    uso de funciones de manipulacion en las mismas.
+
+<- Estructura para la creacion de un archivo -> 
+with open("test.txt", "w") as archivo:
+    archivo.write("Hola mundo desde Python")
+    
+<- metodos necesarios para el manejo de archivos -> 
+* open("text.txt","r-w-a")  -> Apertura de un archivo
+  -r(solo Lectura)  
+  -w(solo Escritura)
+  -a(solo escritura al final del archivo)
+* read()  -> Lectura de un archivo
+* write() -> Escritura de un archivo
+* writelines(["hola","como",...]) -> pasa una lista de strings
+* close() -> Cierra de un archivo
+* readline() -> Lectura primera linea del archivo
+* readlines() -> Lectura todas las lineas del archivo
+* rstrip() -> quitar salto de linea
